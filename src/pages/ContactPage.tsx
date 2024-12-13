@@ -14,18 +14,18 @@ const ContactPage = () => {
             <a href="mailto:your.email@example.com" 
               className="flex items-center text-gray-300 hover:text-accent-500 transition-colors">
               <Mail className="w-5 h-5 mr-3" />
-              <span>your.email@example.com</span>
+              <span>nicolosimoncelli@gmail.com</span>
             </a>
             
             <a href="tel:+1234567890" 
               className="flex items-center text-gray-300 hover:text-accent-500 transition-colors">
               <Phone className="w-5 h-5 mr-3" />
-              <span>+1 (234) 567-890</span>
+              <span>+39 3484318070</span>
             </a>
             
             <div className="flex items-center text-gray-300">
               <MapPin className="w-5 h-5 mr-3" />
-              <span>City, Country</span>
+              <span>Verona, Italy</span>
             </div>
           </div>
 
