@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-zinc-900;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.markdown-content {
+  @apply text-gray-300;
+}
+
+.markdown-content > * {
+  @apply mb-4;
+}
+
+.markdown-content pre {
+  @apply rounded-lg overflow-hidden;
+}
+
+.markdown-content video {
+  @apply rounded-lg shadow-lg;
+}
+
+.markdown-content img {
+  @apply rounded-lg shadow-lg max-w-full h-auto;
+}
