@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { projects } from '../data/projects';
-import ProjectCard from '../components/ProjectCard';
+import { experiences } from '../data/experience';
+import ExperienceCard from '../components/experience/ExperienceCard';
 import { ArrowLeft } from 'lucide-react';
 
 const ExperiencePage = () => {
@@ -15,11 +15,9 @@ const ExperiencePage = () => {
         
         <h1 className="text-4xl font-bold mb-12">Professional Experience</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <Link key={project.id} to={`/project/${project.id}`}>
-              <ProjectCard project={project} />
-            </Link>
+        <div className="space-y-8">
+          {experiences.map((experience) => (
+            <ExperienceCard key={experience.id} experience={experience} />
           ))}
         </div>
       </div>

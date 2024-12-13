@@ -1,12 +1,16 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import AboutSection from '../components/AboutSection';
-import ProjectCard from '../components/ProjectCard';
-import { projects } from '../data/projects';
+import ExperienceCard from '../components/experience/ExperienceCard';
+import { experiences } from '../data/experience';
 import { blogPosts } from '../data/blog-posts';
 import { Link } from 'react-router-dom';
+import ProjectCard from '../components/project/ProjectCard';
 
 const HomePage = () => {
+  // Get the two most recent experiences
+  const recentExperiences = experiences.slice(0, 2);
+
   return (
     <>
       <Hero />
@@ -17,14 +21,12 @@ const HomePage = () => {
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-3xl font-bold">Experience</h2>
             <Link to="/experience" className="text-accent-500 hover:text-accent-400">
-              View All Projects →
+              View All Experience →
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.slice(0, 2).map((project) => (
-              <Link key={project.id} to={`/project/${project.id}`}>
-                <ProjectCard project={project} />
-              </Link>
+          <div className="space-y-8">
+            {recentExperiences.map((experience) => (
+              <ExperienceCard key={experience.id} experience={experience} preview />
             ))}
           </div>
         </div>

@@ -15,3 +15,21 @@ export interface Project {
   role: string;
   duration: string;
 }
+
+export interface Experience {
+  id: string;
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+  highlights: string[];
+  projects?: {
+    name: string;
+    period: string;
+    description: string;
+    technologies: string[];
+  }[];
+  keyAchievements?: string[];
+  technologies?: string[];
+}
